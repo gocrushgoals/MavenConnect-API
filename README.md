@@ -1,21 +1,20 @@
 # MavenConnect-API
 
-
 ## Description
 
 MavenConnect-API is a social network web application API where users can share their thoughts, react to friends’ thoughts, and create a friend list. This API is built using Express.js for routing, a MongoDB database, and the Mongoose ODM.
 
 Table of Contents
+
 - [Installation](#installation)
-- [Usage](#usage)
--[APIEndpoints](#API Endpoints)
-- [Models](#models)
-- [EnvironmentVariables](#environmental variables)
+- [Usage](#usage) 
+- [APIEndpoints](#API Endpoints)
+- [EnvironmentVariables](#environmentalVariables)
 - [Contributing](#contributing)
 - [License](liicense)
 
-
 ## Installation
+
 Clone the repository:
 git clone https://github.com/gocrushgoals/MavenConnect-API.git
 
@@ -26,8 +25,8 @@ Set up your environment variables. Create a .env file in the root of the project
 MONGODB_URI=mongodb://localhost:27017/mavenconnect
 PORT=3001
 
-
 ## Usage
+
 Start the server with the command: npm start
 The API will be running at http://localhost:3001.
 
@@ -78,9 +77,10 @@ DELETE /api/thoughts/:thoughtId/reactions/:reactionId
 
 Remove a reaction from a thought.
 
-
 ## Contributing
+
 Contributions are welcome! Please open an issue or submit a pull request for any changes.
 
 ## License
+
 This project is licensed under the MIT License.
