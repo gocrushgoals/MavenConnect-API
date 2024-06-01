@@ -8,8 +8,8 @@ Table of Contents
 
 - [Installation](#installation)
 - [Usage](#usage) 
-- [APIEndpoints](#API Endpoints)
-- [EnvironmentVariables](#environmentalVariables)
+- [API Endpoints](#APIEndpoints)
+- [Environment Variables](#environmentalVariables)
 - [Contributing](#contributing)
 - [License](liicense)
 
