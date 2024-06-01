@@ -2,7 +2,7 @@
 
 ## Description
 
-MavenConnect-API is a social network web application API where users can share their thoughts, react to friends’ thoughts, and create a friend list. This API is built using Express.js for routing, a MongoDB database, and the Mongoose ODM.
+MavenConnect-API is a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list. This API is built using Express.js for routing, a MongoDB database, and the Mongoose ODM.
 
 Table of Contents
 
