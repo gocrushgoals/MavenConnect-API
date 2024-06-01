@@ -1,7 +1,7 @@
-const User = require('../models/User');
-const Thought = require('../models/Thought');
+const User = require("../models/User");
+const Thought = require("../models/Thought");
 
-
+const userController = {
     getUsers(req, res) {
         User.find()
             .then((users) => res.json(users))
@@ -9,12 +9,12 @@ const Thought = require('../models/Thought');
     },
     getUserById(req, res) {
         User.findOne({ _id: req.params.userId })
-            .select('-__v')
-            .populate('friends')
-            .populate('thoughts')
+            .select("-__v")
+            .populate("friends")
+            .populate("thoughts")
             .then((user) =>
                 !user
-                    ? res.status(404).json({ message: 'No user found with that ID' })
+                    ? res.status(404).json({ message: "No user found with that ID" })
                     : res.json(user)
             )
             .catch((err) => res.status(500).json(err));
@@ -32,7 +32,7 @@ const Thought = require('../models/Thought');
         )
             .then((user) =>
                 !user
-                    ? res.status(404).json({ message: 'No user found with that ID' })
+                    ? res.status(404).json({ message: "No user found with that ID" })
                     : res.json(user)
             )
             .catch((err) => res.status(500).json(err));
@@ -41,10 +41,10 @@ const Thought = require('../models/Thought');
         User.findOneAndDelete({ _id: req.params.userId })
             .then((user) =>
                 !user
-                    ? res.status(404).json({ message: 'No user found with that ID' })
+                    ? res.status(404).json({ message: "No user found with that ID" })
                     : Thought.deleteMany({ _id: { $in: user.thoughts } })
             )
-            .then(() => res.json({ message: 'User and associated thoughts deleted' }))
+            .then(() => res.json({ message: "User and associated thoughts deleted" }))
             .catch((err) => res.status(500).json(err));
     },
     addFriend(req, res) {
@@ -55,7 +55,7 @@ const Thought = require('../models/Thought');
         )
             .then((user) =>
                 !user
-                    ? res.status(404).json({ message: 'No user found with that ID' })
+                    ? res.status(404).json({ message: "No user found with that ID" })
                     : res.json(user)
             )
             .catch((err) => res.status(500).json(err));
@@ -68,10 +68,11 @@ const Thought = require('../models/Thought');
         )
             .then((user) =>
                 !user
-                    ? res.status(404).json({ message: 'No user found with that ID' })
+                    ? res.status(404).json({ message: "No user found with that ID" })
                     : res.json(user)
             )
             .catch((err) => res.status(500).json(err));
     },
+};
 
-module.exports = userRouter;
+module.exports = userController;
