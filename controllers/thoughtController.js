@@ -21,17 +21,17 @@ module.exports = {
         Thought.create(req.body)
             .then((thought) => {
                 return User.findOneAndUpdate(
-                    { _id: req.body._id },
-                    { $addToSet: { thoughts: thought._id } },
+                    { _id: req.body.userId },
+                    { $push: { thoughts: thought._id } },
                     { new: true }
                 );
             })
             .then((user) =>
                 !user
-                    ? res.status(404).json({ message: 'Thought created' })
-                    : res.json('Created the thought 🎉')
+                    ? res.status(404).json({ message: "Thought created, but found no user with that id" })
+                    : res.json({ message: "Thought created and added to user"})
             )
-            .catch((err) => res.status(500).json(err));
+            .catch((err) => res.status(500).json({ message: err.message }));
     },
     updateThought(req, res) {
         Thought.findOneAndUpdate(
@@ -47,7 +47,7 @@ module.exports = {
             .catch((err) => res.status(500).json(err));
     },
     deleteThought(req, res) {
-        Thought.findOneAndRemove({ _id: req.params.thoughtId })
+        Thought.findOneAndDelete({ _id: req.params.thoughtId })
             .then((thought) =>
                 !thought
                     ? res.status(404).json({ message: 'No thought found with that ID' })
