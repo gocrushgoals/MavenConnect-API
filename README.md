@@ -89,9 +89,14 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 
 ## Credits
 
-Tools used: Chat GPT, Tabnine AI
-Assitance with Bootcamp tutors, boot camp modules
+Tools used: Chat GPT: chat.openai.com 
+
+Tabnine AI: https://www.tabnine.com
+
 Express documentation https://expressjs.com/en/guide/routing.html
+
+Coding guidance: OSU Bootcamp tutors, OSU bootcamp modules: assist with formating models and routes
+
 
 ## License
 
