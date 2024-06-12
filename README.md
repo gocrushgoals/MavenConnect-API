@@ -7,6 +7,9 @@ MavenConnect-API is a social network web application where users can share their
 Walk Through Video
 https://drive.google.com/file/d/12izZVyRlDfsFf632wKoIi6Cmwnxgrqxm/view?usp=sharing 
 
+![image](https://github.com/gocrushgoals/MavenConnect-API/assets/157322992/33fde87d-a75b-4ba4-830a-3d2ca4e1d5fb)
+
+
 Table of Contents
 
 - [Installation](#installation)
