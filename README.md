@@ -89,7 +89,7 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 
 ## Credits
 
-Tools used: Chat GPT: chat.openai.com 
+Tools used: Chat GPT: https://www.chat.openai.com  
 
 Tabnine AI: https://www.tabnine.com
 
