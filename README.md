@@ -84,6 +84,12 @@ Remove a reaction from a thought.
 
 Contributions are welcome! Please open an issue or submit a pull request for any changes.
 
+## Credits
+
+Tools used: Chat GPT, Tabnine AI
+Assitance with Bootcamp tutors, boot camp modules
+Express documentation https://expressjs.com/en/guide/routing.html
+
 ## License
 
 This project is licensed under the MIT License.
